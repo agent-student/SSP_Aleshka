@@ -75,7 +75,7 @@ function doubleArray(arr) {
  */
 function getArrayOfPositives(arr) {
    var mas=[];
-   Array.from(arr,function(val,index) {
+   Array.from(arr, function(val, index) {
        if (val > 0)
        mas.push (val);
    });
@@ -95,8 +95,8 @@ function getArrayOfPositives(arr) {
  */
 function getArrayOfStrings(arr) {
     var mas=[];
-    Array.from(arr,function(val,index) {
-       if(typeof(val)==='string')
+    Array.from(arr, function(val, index) {
+       if(typeof(val) === 'string')
        mas.push (val);
    });
    return mas;
@@ -117,8 +117,8 @@ function getArrayOfStrings(arr) {
  */
 function removeFalsyValues(arr) {
    var mas=[];
-    Array.from(arr,function(val,index) {
-       if(new Boolean(val)==true)
+    Array.from(arr, function(val, index) {
+       if(new Boolean(val) == true)
        mas.push (val);
    });
    return mas;
@@ -136,7 +136,7 @@ function removeFalsyValues(arr) {
  */
 function getUpperCaseStrings(arr) {
   var mas=[];
-    Array.from(arr,function(val,index) {
+    Array.from(arr, function(val, index) {
        mas.push (val.toUpperCase());
    });
    return mas;
@@ -172,7 +172,7 @@ function getStringsLength(arr) {
  *    [ 1, 'b', 'c'], 0, 'x'  => [ 'x', 1, 'b', 'c' ]
  */
 function insertItem(arr, item, index) {
-  return arr.splice(index,0,item);
+  return arr.splice(index, 0, item);
 }
 
 /**
@@ -245,8 +245,8 @@ function toCsvText(arr) {
  */
 function toArrayOfSquares(arr) {
    var mas=[];
-   Array.from(arr,function(val,n) {
-   mas.push (Math.pow(val,2));});
+   Array.from(arr, function(val, n) {
+   mas.push (Math.pow(val, 2));});
    return mas;
 }
 
@@ -328,7 +328,7 @@ function propagateItemsByPositionIndex(arr) {
  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
  */
 function get3TopItems(arr) {
-    return arr.sort(function(a,b) {
+    return arr.sort(function(a, b) {
     return a - b;
     }).reverse().splice(0, 3);
 }
@@ -395,9 +395,9 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
 function getItemsSum(arr) {
-    var sum=0;
-    Array.from(arr,function(val,n) {
-    sum=sum+arr[n];
+    var sum = 0;
+    Array.from(arr, function(val, n) {
+    sum = sum + arr[n];
     });
     return sum;
  }
@@ -417,7 +417,7 @@ function getItemsSum(arr) {
 function getFalsyValuesCount(arr) {
     var sum = 0;
     Array.from(arr, function(val, n) {
-        if(new Boolean(val)==false)
+        if(new Boolean(val) == false)
         sum++; });
     return sum;
 }
@@ -486,7 +486,7 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  */
 function sortCitiesArray(arr) {
-   return arr.sort((x,y)=>
+   return arr.sort((x, y)=>
    x.country.localeCompare(y.country) * 1000 +
    x.city.localeCompare(y.city));
 }
@@ -512,7 +512,7 @@ function sortCitiesArray(arr) {
 function getIdentityMatrix(n) {
 var mas=new Array(n);
 mas.fill(0);
-return mas.map(function (x,index) {
+return mas.map(function (x, index) {
     var out = new Array (n);
     out.fill(0);
     out[index] = 1;
@@ -554,8 +554,8 @@ function getIntervalArray(start, end) {
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-   return arr.filter (function(value,index,self) {
-       return self.indexOf(value)===index;
+   return arr.filter (function(value, index, self) {
+       return self.indexOf(value) === index;
    });
 }
 
