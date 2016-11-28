@@ -1,0 +1,27 @@
+{
+  "name": "lab3",
+  "version": "1.0.0",
+  "description": "library",
+  "main": "index.js",
+  "scripts": {
+"test": "echo \"Error: no test specified\" && exit 1",
+"build": "browserify index.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agent-student/SSP_Aleshka.git"
+  },
+  "keywords": [
+    "work"
+  ],
+  "author": "Alexey",
+  "license": "SEE LICENSE IN <filename>",
+  "bugs": {
+    "url": "https://github.com/agent-student/SSP_Aleshka/issues"
+  },
+  "homepage": "https://github.com/agent-student/SSP_Aleshka#readme",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "lodash": "^4.17.2"
+  }
+}
